@@ -1,0 +1,70 @@
+.profile {
+  .card {
+    max-width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    color: #ccc;
+
+    img {
+      width: 100%;
+      max-width: 550px;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    span.profile-data {
+      margin: 0 1rem;
+      flex: 1; // Adicionado flex-grow para ocupar todo o espaço disponível
+    }
+
+    span.profile-data > * {
+      border-top: 1px solid #ccc;
+      padding: 5px 0;
+    }
+  }
+}
+
+.circles {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+
+  .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .circle-1 {
+    background-color: #ff605c;
+  }
+
+  .circle-2 {
+    background-color: #ffbd44;
+  }
+
+  .circle-3 {
+    background-color: #00ca4e;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile .card {
+    flex-direction: column; // Altera a direção do flexbox para empilhar em telas menores
+    align-items: center; 
+    width: 90vw;// Alinha os itens centralmente na vertical
+  }
+
+  .profile .card img {
+    max-width: 100%; // Garante que a imagem do perfil seja responsiva
+    margin-bottom: 1rem; // Adiciona espaço abaixo da imagem
+  }
+
+  .circles {
+    justify-content: center; // Centraliza os círculos horizontalmente
+  }
+}
+
+/* Outros estilos permanecem os mesmos */
